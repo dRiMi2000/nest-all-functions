@@ -7,10 +7,9 @@ async function bootstrap() {
   const PORT = process.env.PORT || 3000;
   const app = await NestFactory.create(AppModule);
   const config = new DocumentBuilder()
-  .setTitle('Изучение NEST-REST-API')
-  .setDescription('Документация REST-API')
+  .setTitle('Работа с JWT-токеном, ролями пользователей, файлами, валидацией')
+  .setDescription('Документацию написал Дмитрий Иваненко')
   .setVersion('1.0.0')
-  .addTag('Дима')
   .build()
   const document = SwaggerModule.createDocument(app,config)
   SwaggerModule.setup('/api/docs',app,document)
